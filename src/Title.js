@@ -1,13 +1,8 @@
 import React, {useState, useEffect} from 'react';
 
 export default function Title(props) {
-  const [fontSize, updateFontSize] = useState("20px");
   
   const [city, updateCity] = useState('');
-
-  const handleClick = () => {
-    updateFontSize(fontSize => `${parseInt(fontSize) + 5}px`);
-  }
 
   useEffect(() => {
     const getCountry = async () => {
@@ -22,7 +17,7 @@ export default function Title(props) {
   }, [])
 
   return (
-    <h1 style={{fontSize}} onClick={handleClick}>
+    <h1>
       {city}
     </h1>
   );
