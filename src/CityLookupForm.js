@@ -1,12 +1,9 @@
 import React from 'react';
 import useCityLookupForm from './CustomHooks';
 
-const CityForm = () => {
+const CityForm = (props) => {
 
-  const showSubmit = () => {
-    alert(`submitted`);
-  }
-  const {inputs, handleInputChange, handleSubmit} = useCityLookupForm(showSubmit);
+  const {inputs, handleInputChange, handleSubmit} = useCityLookupForm(props.handleSubmit);
 
   return (
     <form onSubmit={handleSubmit}>

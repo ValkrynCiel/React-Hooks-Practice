@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const useCityLookupForm = (callback) => {
+const useCityLookupForm = (submitCallback) => {
   const [inputs, setInputs] = useState({
     cityName: '',
     countryName: ''
@@ -10,7 +10,11 @@ const useCityLookupForm = (callback) => {
     if (event) {
       event.preventDefault();
     }
-    callback();
+    submitCallback(inputs);
+    setInputs(() => ({
+      cityName: '',
+      countryName: ''
+    }));
   }
   const handleInputChange = (event) => {
     event.persist();

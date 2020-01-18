@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-import Title from './Title';
-import CityLookupForm from './CityLookupForm';
+import NewCityDisplay from './NewCityDisplay';
 
 function App() {
   return (
     <>
-      <CityLookupForm />
-      <Title />
+      <NewCityDisplay />
     </>
   );
 }
